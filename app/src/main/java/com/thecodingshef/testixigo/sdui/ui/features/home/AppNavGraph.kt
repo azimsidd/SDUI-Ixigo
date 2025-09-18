@@ -3,12 +3,11 @@ package com.thecodingshef.testixigo.sdui.ui.features.home
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
-import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.thecodingshef.testixigo.sdui.ui.features.FaresScreen
+import com.thecodingshef.testixigo.divikit.FaresScreen
 import com.yandex.div.core.view2.Div2View
 
 @Composable
