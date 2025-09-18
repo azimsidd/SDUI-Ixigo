@@ -1,0 +1,308 @@
+{
+  "templates": {
+    "text_block": {
+      "type": "text",
+      "font_size": 15,
+      "line_height": 20,
+      "text_color": "#000000",
+      "margins": {
+        "left": 0,
+        "right": 0
+      },
+      "paddings": {
+        "left": 10,
+        "right": 10,
+        "top": 4
+      }
+    }
+  },
+  "card": {
+    "log_id": "grid",
+    "states": [
+      {
+        "state_id": 0,
+        "div": {
+          "type": "container",
+          "orientation": "vertical",
+          "items": [
+            {
+              "type": "container",
+              "orientation": "horizontal",
+              "items": [
+                {
+                  "type": "text_block",
+                  "text": "Cheapest Fares From",
+                  "width": {
+                    "type": "wrap_content"
+                  },
+                  "font_size": 18,
+                  "font_weight": "bold",
+                  "margins": {
+                    "bottom": 12,
+                    "left": 10,
+                    "right": 10,
+                    "top": 4
+                  }
+                },
+                {
+                  "type": "text_block",
+                  "text": "New Delhi ",
+                  "width": {
+                    "type": "wrap_content"
+                  },
+                  "images": [
+                    {
+                      "start": 9,
+                      "url": "https://cdn.thecodingshef.in/uploads/dropdown-arrow.svg",
+                      "height": {
+                        "type": "fixed",
+                        "value": 4
+                      },
+                      "width": {
+                        "type": "fixed",
+                        "value": 4
+                      }
+                    }
+                  ],
+                  "font_size": 14,
+                  "font_weight": "medium",
+                  "border": {
+                    "corner_radius": 16,
+                    "stroke": {
+                      "color": "#141414",
+                      "width": 1
+                    }
+                  },
+                  "padding": {
+                    "bottom": 8,
+                    "right": 8,
+                    "top": 8
+                  },
+                  "margins": {
+                    "bottom": 12,
+                    "right": 10,
+                    "top": 4
+                  },
+                  "action": {
+                    "log_id": "navigate_action",
+                    "url": "screen://fare_detail",
+                    "log_url": "https://log.example.com/navigate"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "width": {
+                "type": "match_parent"
+              },
+              "height": {
+                "type": "wrap_content"
+              },
+              "margins": {
+                "bottom": 12,
+                "left": 12,
+                "right": 12,
+                "top": 8
+              },
+              "item_spacing": 16,
+              "alignment_horizontal": "center",
+              "column_count": 2,
+              "items": [
+                {
+                  "type": "container",
+                  "orientation": "vertical",
+                  "width": {
+                    "type": "match_parent",
+                    "weight": 1
+                  },
+                  "height": {
+                    "type": "wrap_content"
+                  },
+                  "margins": {
+                    "right": 4,
+                    "bottom": 16
+                  },
+                  "border": {
+                    "corner_radius": 16
+                  },
+                  "items": [
+                    {
+                      "type": "image",
+                      "width": {
+                        "type": "match_parent"
+                      },
+                      "height": {
+                        "type": "fixed",
+                        "value": 100
+                      },
+                      "image_url": "https://cdn.thecodingshef.in/uploads/bhatinda.svg",
+                      "scale_type": "center_crop",
+                      "corner_radius": 12
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "Bathinda"
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "Thu, 25 Sep"
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "₹ 1,680",
+                      "font_size": 16,
+                      "font_weight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "orientation": "vertical",
+                  "width": {
+                    "type": "match_parent",
+                    "weight": 1
+                  },
+                  "height": {
+                    "type": "wrap_content"
+                  },
+                  "margins": {
+                    "left": 4,
+                    "bottom": 16
+                  },
+                  "border": {
+                    "corner_radius": 16
+                  },
+                  "items": [
+                    {
+                      "type": "image",
+                      "width": {
+                        "type": "match_parent"
+                      },
+                      "height": {
+                        "type": "fixed",
+                        "value": 100
+                      },
+                      "image_url": "https://cdn.thecodingshef.in/uploads/bhatinda.svg",
+                      "scale_type": "center_crop",
+                      "corner_radius": 12
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "Bathinda"
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "Thu, 25 Sep"
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "₹ 1,680",
+                      "font_size": 16,
+                      "font_weight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "orientation": "vertical",
+                  "width": {
+                    "type": "match_parent",
+                    "weight": 1
+                  },
+                  "height": {
+                    "type": "wrap_content"
+                  },
+                  "margins": {
+                    "right": 4,
+                    "bottom": 16
+                  },
+                  "border": {
+                    "corner_radius": 16
+                  },
+                  "items": [
+                    {
+                      "type": "image",
+                      "width": {
+                        "type": "match_parent"
+                      },
+                      "height": {
+                        "type": "fixed",
+                        "value": 100
+                      },
+                      "image_url": "https://cdn.thecodingshef.in/uploads/bhatinda.svg",
+                      "scale_type": "center_crop",
+                      "corner_radius": 12
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "Bathinda"
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "Thu, 25 Sep"
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "₹ 1,680",
+                      "font_size": 16,
+                      "font_weight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "orientation": "vertical",
+                  "width": {
+                    "type": "match_parent",
+                    "weight": 1
+                  },
+                  "height": {
+                    "type": "wrap_content"
+                  },
+                  "margins": {
+                    "left": 4,
+                    "bottom": 16
+                  },
+                  "border": {
+                    "corner_radius": 16
+                  },
+                  "items": [
+                    {
+                      "type": "image",
+                      "width": {
+                        "type": "match_parent"
+                      },
+                      "height": {
+                        "type": "fixed",
+                        "value": 100
+                      },
+                      "image_url": "https://cdn.thecodingshef.in/uploads/bhatinda.svg",
+                      "scale_type": "center_crop",
+                      "corner_radius": 12
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "Bathinda"
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "Thu, 25 Sep"
+                    },
+                    {
+                      "type": "text_block",
+                      "text": "₹ 1,680",
+                      "font_size": 16,
+                      "font_weight": "bold"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
