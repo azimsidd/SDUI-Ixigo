@@ -4,10 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.thecodingshef.testixigo.sdui.data.model.GridConfig
 import com.thecodingshef.testixigo.sdui.data.model.LayoutConfig
-import com.thecodingshef.testixigo.sdui.data.model.SnippetContainer
-import com.thecodingshef.testixigo.sdui.data.model.SnippetData
 import com.thecodingshef.testixigo.sdui.data.model.SDUIResponse
 import com.thecodingshef.testixigo.sdui.data.model.ScreenData
+import com.thecodingshef.testixigo.sdui.data.model.SnippetContainer
+import com.thecodingshef.testixigo.sdui.data.model.SnippetData
 import com.thecodingshef.testixigo.sdui.data.model.Status
 import com.thecodingshef.testixigo.sdui.data.model.component.ChipData
 import com.thecodingshef.testixigo.sdui.data.model.component.ClickAction
