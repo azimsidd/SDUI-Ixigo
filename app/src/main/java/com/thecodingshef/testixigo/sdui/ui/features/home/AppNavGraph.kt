@@ -1,5 +1,7 @@
 package com.thecodingshef.testixigo.sdui.ui.features.home
 
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.NavHostController
@@ -28,7 +30,34 @@ fun AppNavGraph(
         composable(ScreenRoutes.CHEAP_FARES.route) {
             FaresScreen(div2View = div2View)
         }
-        composable(ScreenRoutes.FARE_DETAIL.route) {
+        composable(
+            ScreenRoutes.FARE_DETAIL.route,
+            enterTransition = {
+                slideIntoContainer(
+                    AnimatedContentTransitionScope.SlideDirection.Up, // slide from bottom
+                    animationSpec = tween(200)
+                )
+            },
+            exitTransition = {
+                slideOutOfContainer(
+                    AnimatedContentTransitionScope.SlideDirection.Down, // slide to bottom
+                    animationSpec = tween(150)
+                )
+            },
+            popEnterTransition = {
+                slideIntoContainer(
+                    AnimatedContentTransitionScope.SlideDirection.Up,
+                    animationSpec = tween(200)
+                )
+            },
+            popExitTransition = {
+                slideOutOfContainer(
+                    AnimatedContentTransitionScope.SlideDirection.Down,
+                    animationSpec = tween(200)
+                )
+            }
+
+        ) {
             FareDetail(onBack = {
                 navController.popBackStack()
             })
