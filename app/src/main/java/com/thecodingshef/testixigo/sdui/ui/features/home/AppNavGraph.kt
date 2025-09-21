@@ -15,15 +15,13 @@ fun AppNavGraph(
     div2View: Div2View,
     navController: NavHostController = rememberNavController()
 ) {
-    NavHost(navController = navController, startDestination = ScreenRoutes.CHEAP_FARES.route) {
+    NavHost(navController = navController, startDestination = ScreenRoutes.HOME.route) {
 
         // this screen is designed using custom sdui framework
         composable(ScreenRoutes.HOME.route) {
             HomeScreen(
                 navController = navController
             )
-
-            // SDUIScreenMock()
         }
         // this screen is designed using DIVIKIT sdui framework
         composable(ScreenRoutes.CHEAP_FARES.route) {

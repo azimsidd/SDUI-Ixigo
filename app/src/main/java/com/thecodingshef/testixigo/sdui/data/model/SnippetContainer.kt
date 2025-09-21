@@ -1,5 +1,6 @@
 package com.thecodingshef.testixigo.sdui.data.model
 
+import com.thecodingshef.testixigo.sdui.data.model.component.PaddingData
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -7,6 +8,12 @@ import kotlinx.serialization.Serializable
 data class SnippetContainer(
     @SerialName("layoutConfig") val layoutConfig: LayoutConfig,
     val data: SnippetData
+)
+
+@Serializable
+data class ScreenConfig(
+    @SerialName("bgColor") val bgColor: String? = null,
+    @SerialName("padding") val padding: PaddingData? = null,
 )
 
 @Serializable

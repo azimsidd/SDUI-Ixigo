@@ -1,9 +1,7 @@
 package com.thecodingshef.testixigo.divikit// 5. ViewModel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.thecodingshef.testixigo.sdui.ui.features.home.viewmodel.SDUIUiState
 import com.yandex.div.data.DivParsingEnvironment
 import com.yandex.div.json.ParsingErrorLogger
 import com.yandex.div2.DivData
@@ -22,9 +20,6 @@ class FareViewModel @Inject constructor(
     private val repository: FareRepository,
 ) : ViewModel() {
 
-    private val _divData = MutableStateFlow<DivData?>(null)
-    val divData: StateFlow<DivData?> = _divData
-
     private val _uiState = MutableStateFlow<UiState>(UiState.Loading)
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
     fun fetchDivData() {
@@ -34,7 +29,6 @@ class FareViewModel @Inject constructor(
                 try {
                     val jsonObject = JSONObject(jsonString)
                     val parsedDivData = jsonObject.asDiv2DataWithTemplates()
-                    _divData.value = parsedDivData
                     _uiState.value = UiState.Success(parsedDivData)
                 } catch (e: JSONException) {
                     _uiState.value = UiState.Error(e.message ?: "Json Error")

@@ -1,5 +1,6 @@
 package com.thecodingshef.testixigo.sdui.data.model
 
+import com.thecodingshef.testixigo.sdui.data.model.snippets.SpacerSnippetData
 import com.thecodingshef.testixigo.sdui.data.model.snippets.Type1SnippetData
 import com.thecodingshef.testixigo.sdui.data.model.snippets.Type2SnippetData
 import com.thecodingshef.testixigo.sdui.data.model.snippets.Type3TitleChipSnippetData
@@ -72,6 +73,13 @@ object SnippetContainerSerializer : KSerializer<SnippetContainer> {
                         Type3TitleChipSnippetData.serializer(), itemElement
                     )
                 }
+
+                SnippetType.SPACER_SNIPPET.type -> {
+                    decoder.json.decodeFromJsonElement(
+                        SpacerSnippetData.serializer(), itemElement
+                    )
+                }
+
 
                 else -> throw SerializationException("Unknown snippetType '${layoutConfig.snippetType}'")
             }

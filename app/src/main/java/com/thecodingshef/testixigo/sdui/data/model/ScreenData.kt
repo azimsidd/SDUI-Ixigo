@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ScreenData(
     val header: Header? = null,
-    @SerialName("bgColor") val bgColor: String? = null,
+    @SerialName("screenConfig") val screenConfig: ScreenConfig? = null,
     val results: List<SnippetContainer> = emptyList()
 )
 

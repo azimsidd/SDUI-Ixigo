@@ -19,5 +19,6 @@ data class Type2SnippetData(
     @SerialName("bg_color") override var bgColor: String? = null,
     @SerialName("corner_radius") val cornerRadius: Int = 8,
     @SerialName("click_action") val clickAction: ClickAction? = null,
-    val padding: PaddingData? = null
+    val padding: PaddingData? = null,
+
 ) : SDUISnippets(), BgColor

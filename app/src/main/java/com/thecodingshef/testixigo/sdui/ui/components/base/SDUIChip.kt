@@ -45,7 +45,6 @@ fun SDUIChip(
             chipData.text?.let { title ->
                 SDUIText(textData = title)
             }
-
         }
     }
 }

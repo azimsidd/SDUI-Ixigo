@@ -2,6 +2,7 @@ package com.thecodingshef.testixigo.sdui.ui.features.home.viewmodel// 5. ViewMod
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.thecodingshef.testixigo.sdui.data.model.SDUIResponse
 import com.thecodingshef.testixigo.sdui.data.repository.SDUIRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -19,7 +20,11 @@ class HomeViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<SDUIUiState>(SDUIUiState.Loading)
     val uiState: StateFlow<SDUIUiState> = _uiState.asStateFlow()
 
-    fun loadHomeFeed() {
+    fun loadHomeFeed(isMock: Boolean = false) {
+        if (isMock) {
+            _uiState.value = SDUIUiState.Success(SDUIResponse().getMockData())
+            return
+        }
         viewModelScope.launch {
             _uiState.value = SDUIUiState.Loading
             repository.getSDUIData()
